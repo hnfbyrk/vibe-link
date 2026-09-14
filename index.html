@@ -1,165 +1,75 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kişisel Link Sayfam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      /* Yeni koyu gri-siyah arka plan geçişi */
-      --purple-bg: linear-gradient(135deg, #23273a 0%, #05070b 100%);
-      --glass-bg: rgba(34, 36, 44, 0.20);
-      --glass-blur: blur(16px);
-      --border-color: rgba(186,179,251,0.71);
-      --text-color: #fff;
-      --link-glass-bg: rgba(80,80,100,0.23);
-    }
-    body {
-      min-height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--purple-bg);
-      font-family: 'Inter', Arial, sans-serif;
-    }
-    .container {
-      background: var(--glass-bg);
-      border-radius: 24px;
-      box-shadow: 0 8px 40px 0 rgba(25,22,40,.35);
-      border: 1.5px solid var(--border-color);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      padding: 36px 28px 28px 28px;
-      max-width: 370px;
-      width: 94vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-    }
-    .avatar {
-      width: 82px;
-      height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #797e8a;
-      color: #fff;
-      font-family: 'Inter', Arial, sans-serif;
-      font-size: 2.6rem;
-      font-weight: bold;
-      border-radius: 50%;
-      border: 2.5px solid var(--border-color);
-      margin-bottom: 8px;
-      user-select: none;
-      letter-spacing: 0.1em;
-    }
-    .name {
-      color: var(--text-color);
-      font-size: 1.38rem;
-      font-weight: 700;
-      margin: 0 0 7px 0;
-      text-align: center;
-      text-shadow: 0 2px 18px rgba(80,80,100,0.19);
-      letter-spacing: 0.04em;
-    }
-    .desc {
-      color: #e0cfff;
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0 0 16px 0;
-      text-align: center;
-      line-height: 1.5;
-      letter-spacing: 0.01em;
-    }
-    .links {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 10px;
-    }
-    .link-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--text-color);
-      background: var(--link-glass-bg);
-      border: 2.3px solid;
-      border-image: linear-gradient(120deg, #d6a6ff 0%, #713cff 30%, #78a1ff 60%, #ffffff99 100%) 1;
-      border-radius: 18px;
-      padding: 14px 0;
-      font-size: 1.12rem;
-      font-weight: 600;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      box-shadow:
-        0 6px 28px 0 rgba(99, 66, 209, 0.16),
-        0 0px 0px 1.5px #b299ff60 inset;
-      position: relative;
-      transition: background 0.15s, transform 0.11s, box-shadow 0.14s, border 0.2s;
-    }
-    .link-item:hover {
-      background: rgba(170,150,255,0.17);
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 10px 40px rgba(99,66,209,0.18),
-                  0 0 8px #d0c8ff60 inset;
-      border-image: linear-gradient(120deg, #9f65ff 0%, #5b3ab7 60%, #ffffff 100%) 1;
-    }
-    .link-icon {
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 1.22em;
-      filter: drop-shadow(0 0 5px #bb90fa4d);
-    }
-    @media (max-width: 500px) {
-      .container {
-        padding: 20px 6vw 14px 6vw;
-        border-radius: 18px;
-      }
-      .avatar {
-        width: 60px;
-        height: 60px;
-        font-size: 1.7rem;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hanife's professional links, engineering portfolio, and projects.">
+  <meta name="theme-color" content="#07111f">
+  <title>Hanife | Professional Links</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="avatar">H</div>
+  <main class="page">
+    <section class="profile-card" aria-labelledby="profile-name">
+      <div class="identity">
+        <div class="avatar" aria-hidden="true">H</div>
+        <div>
+          <p class="eyebrow">Professional links</p>
+          <h1 id="profile-name">Hanife Bayrak</h1>
+        </div>
+      </div>
 
-    <div class="name">Hanife BAYRAK</div>
-    <div class="desc">Electronics and Communications Engineer</div>
-    <div class="links">
-      <a class="link-item" href="https://www.linkedin.com/in/hanife-bayrak/" target="_blank">
-        <span class="link-icon">
-          <!-- linkedin icon (svg) -->
-          <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.75 2.75H2.25A1.5 1.5 0 0 0 .75 4.25v15.5a1.5 1.5 0 0 0 1.5 1.5h17.5a1.5 1.5 0 0 0 1.5-1.5V4.25a1.5 1.5 0 0 0-1.5-1.5zm-12 16H4.25V9.75H7.75v9zm-1.75-10.5A1.25 1.25 0 1 1 7.25 7a1.25 1.25 0 0 1-1.25 1.25zm14.25 10.5h-3.5v-4.5c0-1.07-.02-2.44-1.5-2.44-1.5 0-1.73 1.17-1.73 2.36v4.58h-3.5v-9h3.36v1.23h.05c.47-.89 1.62-1.82 3.34-1.82 3.57 0 4.23 2.35 4.23 5.41v4.18z" fill="#fff"/></svg>
-        </span>
-        LinkedIn
-      </a>
-      <a class="link-item" href="https://github.com/" target="_blank">
-        <span class="link-icon">
-          <!-- github icon (svg) -->
-          <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 2.1C5.534 2.1 1.1 6.534 1.1 12c0 4.298 2.76 7.937 6.587 9.243.482.092.66-.21.66-.467 0-.23-.009-.986-.014-1.792-2.677.582-3.241-1.289-3.241-1.289-.441-1.125-1.078-1.426-1.078-1.426-.882-.601.068-.589.068-.589 0.974.07 1.489.999 1.489.999.86 1.478 2.26 1.05 2.816.805.088-.626.34-1.05.619-1.293-2.155-.243-4.422-1.079-4.422-4.803 0-1.061.38-1.929.995-2.616-.101-.248-.426-1.246.095-2.601 0 0 .809-.262 2.65.997a9.166 9.166 0 012.415-.325c.82.004 1.646.11 2.415.325 1.84-1.259 2.649-.997 2.649-.997.523 1.355.197 2.353.096 2.601.618.687.995 1.555.995 2.616 0 3.731-2.271 4.556-4.435 4.797.349.297.66.886.66 1.786 0 1.288-.013 2.328-.013 2.646 0 .26.175.563.664.467C18.14 19.936 20.9 16.297 20.9 12c0-5.466-4.434-9.9-9.9-9.9z" fill="#fff"/></svg>
-        </span>
-        GitHub
-      </a>
-      <a class="link-item" href="mailto:byrk.hnf@gmail.com">
-        <span class="link-icon">
-          <!-- mail icon (svg) -->
-          <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5.5" width="17" height="11" rx="2.5" stroke="#fff" stroke-width="1.5"/><path d="M4 7l7 5 7-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        E-posta
-      </a>
-    </div>
-  </div>
+      <p class="role">Electronic & Communications Engineer</p>
+      <p class="summary">
+        Focused on systems, communication networks, Python automation,
+        and reliable operational workflows.
+      </p>
+
+      <div class="focus-tags" aria-label="Technical focus">
+        <span>Systems</span>
+        <span>Networks</span>
+        <span>Automation</span>
+      </div>
+
+      <nav class="links" aria-label="Professional links">
+        <a class="link featured" href="https://hnfbyrk.github.io/hnfbyrk/" target="_blank" rel="noopener noreferrer">
+          <span>
+            <strong>Engineering Portfolio</strong>
+            <small>Experience, focus areas, and projects</small>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link" href="https://github.com/hnfbyrk/LogInsightAI" target="_blank" rel="noopener noreferrer">
+          <span>
+            <strong>LogInsightAI</strong>
+            <small>Python log analysis and reporting</small>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link" href="https://github.com/hnfbyrk" target="_blank" rel="noopener noreferrer">
+          <span>
+            <strong>GitHub Profile</strong>
+            <small>Code and engineering projects</small>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="link" href="https://www.linkedin.com/in/hanife-bayrak/" target="_blank" rel="noopener noreferrer">
+          <span>
+            <strong>LinkedIn</strong>
+            <small>Professional background and network</small>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+      <footer>
+        <span class="status-dot" aria-hidden="true"></span>
+        Building reliable systems through practical projects
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
